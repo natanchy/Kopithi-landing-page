@@ -26,7 +26,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 2px solid #b689b6;
+  border-bottom: 2px solid #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -125,7 +125,7 @@ body {
 }
 
 .hero .content p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-top: 1rem;
   line-height: 1.4;
   font-weight: 100;
@@ -142,6 +142,22 @@ body {
   background-color: var(--primary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  /* Tambahkan transisi biar halus */
+  transition: 0.3s ease;
+}
+
+/* Efek Animasi pas di-hover (disentuh kursor) */
+.hero .content .cta:hover {
+  background-color: #966b42; /* Warna cokelat lebih gelap */
+  transform: translateY(-5px); /* Tombol naik sedikit ke atas */
+  box-shadow: 0 5px 15px rgba(182, 137, 91, 0.4); /* Tambah bayangan lembut */
+}
+
+/* Efek pas tombol diklik */
+.hero .content .cta:active {
+  transform: translateY(
+    -2px
+  ); /* Turun sedikit pas diklik biar kerasa ada tekanan */
 }
 /* About Section */
 .about,
@@ -204,35 +220,41 @@ body {
   margin: auto;
   font-weight: 100;
   line-height: 1.6;
+  font-size: 1.2rem;
 }
 
 .menu .row {
   display: flex;
-  margin-top: 4rem;
+  flex-wrap: wrap; /* Supaya kalau layar kecil, dia turun ke bawah */
+  margin-top: 5rem;
+  justify-content: center; /* Biar kartu menu di tengah */
 }
 
 .menu .row .menu-card {
   text-align: center;
-  padding: 1rem;
+  padding-bottom: 4rem;
+  flex: 1 1 20rem; /* Rahasianya di sini: kasih lebar dasar 20rem */
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .menu .row .menu-card img {
   border-radius: 50%;
-  width: 80%;
-  margin: auto;
-  align-items: center;
+  width: 50%; /* Ukuran gambar jangan kegedean biar pas berderet */
+  margin-bottom: 1rem;
+  border: 2px solid var(--primary); /* Bonus: kasih border biar makin cakep */
 }
 
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 0.5rem;
+  font-size: 1.5rem;
 }
 
-.menu p {
+.menu .row .menu-card .menu-card-price {
   font-size: 1.2rem;
+  color: var(--primary);
 }
-
 /* contact section */
 .contact .row {
   display: flex;
