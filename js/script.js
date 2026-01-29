@@ -1,20 +1,10 @@
-// Toggle class active untuk hamburger menu
-const navbarNav = document.querySelector(".navbar-nav");
-// ketika hamburger menu diklik
-document.querySelector("#hamburger-menu").onclick = () => {
-  navbarNav.classList.toggle("active");
-};
-
-// Klik di luar elemen untuk menghilangkan nav
-const hm = document.querySelector("#hamburger-menu");
-
 document.addEventListener("click", function (e) {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
   }
 });
 
-// Smooth Scrolling (Opsional karena HTML sudah dukung, tapi ini lebih 'pro')
+// Smooth Scrolling (Opsional)
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -23,3 +13,40 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+// Alert untuk tombol 'Beli Sekarang'
+const ctaButton = document.querySelector("#cta-button");
+
+ctaButton.addEventListener("click", function (e) {
+  e.preventDefault(); //
+  alert(
+    "Fitur Pembelian sedang dalam pengembangan. Stay tuned yaa, love u! 💻🚀 -atmin",
+  );
+});
+
+// 1. Toggle class active untuk Hamburger Menu
+const navbarNav = document.querySelector(".navbar-nav");
+const hamburger = document.querySelector("#hamburger-menu");
+
+// Ketika hamburger menu diklik
+hamburger.onclick = (e) => {
+  e.preventDefault();
+  navbarNav.classList.toggle("active");
+};
+
+// 2. Klik di luar elemen untuk menutup navbar (Penting biar user gak bingung!)
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
+
+document.querySelector("#search").onclick = (e) => {
+  e.preventDefault();
+  alert("Fitur pencarian lagi disiapin.sabar dlu yee🔍");
+};
+
+document.querySelector("#shopping-cart").onclick = (e) => {
+  e.preventDefault();
+  alert("Keranjangnya masih dipake buat tempat kopi, Banh! 🛒");
+};

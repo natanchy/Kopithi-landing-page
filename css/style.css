@@ -225,15 +225,15 @@ body {
 
 .menu .row {
   display: flex;
-  flex-wrap: wrap; /* Supaya kalau layar kecil, dia turun ke bawah */
-  margin-top: 5rem;
-  justify-content: center; /* Biar kartu menu di tengah */
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: center; /* Biar menu di tengah */
 }
 
 .menu .row .menu-card {
   text-align: center;
   padding-bottom: 4rem;
-  flex: 1 1 20rem; /* Rahasianya di sini: kasih lebar dasar 20rem */
+  flex: 1 1 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,14 +241,14 @@ body {
 
 .menu .row .menu-card img {
   border-radius: 50%;
-  width: 50%; /* Ukuran gambar jangan kegedean biar pas berderet */
+  width: 50%;
   margin-bottom: 1rem;
-  border: 2px solid var(--primary); /* Bonus: kasih border biar makin cakep */
+  border: 2px solid var(--primary);
 }
 
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .menu .row .menu-card .menu-card-price {
@@ -270,7 +270,7 @@ body {
 }
 
 .contact .row form {
-  flex: 1 1 25rem;
+  flex: 1 1 30rem;
   padding: 5rem 2rem;
   text-align: center;
 }
@@ -278,15 +278,15 @@ body {
 .contact .row form .input-group {
   display: flex;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   background-color: var(--bg);
   border: 1px solid #eee;
   padding-left: 2rem;
 }
 
 .contact .row form .input-group input {
-  padding: 2rem;
-  font-size: 1.7rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   width: 100%;
   background: none;
   color: #fff;
@@ -314,6 +314,11 @@ footer .links {
   color: #fff;
   margin: 0rem;
   padding: 0rem;
+}
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 /* media queries */
@@ -349,7 +354,7 @@ footer .links {
   }
 
   .navbar .navbar-nav a {
-    color: var(--bg);
+    color: #010101; /* Ganti jadi warna hitam atau cokelat gelap */
     display: block;
     margin: 1.5rem;
     padding: 8px;
